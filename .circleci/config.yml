@@ -7,6 +7,10 @@ jobs:
     steps:
       - checkout
       - run:
+          name: hoge
+          command: |
+            echo "A=B" >> $BASH_ENV
+      - run:
           name: test
           command: |
             echo '4'
