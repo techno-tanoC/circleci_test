@@ -5,6 +5,7 @@ jobs:
     docker:
       - image: ubuntu:18.04
     steps:
+      - checkout
       - run:
           name: test
           command: |
