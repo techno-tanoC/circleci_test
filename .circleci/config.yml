@@ -3,12 +3,18 @@ version: 2.1
 jobs:
   build:
     docker:
-      - image: alpine:3.11
+      - image: ubuntu:18.04
     steps:
+      - checkout
+      - run:
+          name: hoge
+          command: |
+            echo "A=B" >> $BASH_ENV
       - run:
           name: test
           command: |
-            echo '3'
+            echo '4'
+            source $BASH_ENV
             echo 'echo ${CIRCLE_PULL_REQUEST}'
             echo ${CIRCLE_PULL_REQUEST}
             echo 'echo ${CIRCLE_PULL_REQUESTS}'
