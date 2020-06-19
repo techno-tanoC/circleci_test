@@ -8,11 +8,15 @@ jobs:
       - run:
           name: test
           command: |
-            echo '2-1'
+            echo '3'
             echo 'echo ${CIRCLE_PULL_REQUEST}'
             echo ${CIRCLE_PULL_REQUEST}
             echo 'echo ${CIRCLE_PULL_REQUESTS}'
             echo ${CIRCLE_PULL_REQUESTS}
+            echo 'echo ${CI_PULL_REQUEST}'
+            echo ${CI_PULL_REQUEST}
+            echo 'echo ${CIRCLE_PR_NUMBER}'
+            echo ${CIRCLE_PR_NUMBER}
 
 workflows:
   version: 2
