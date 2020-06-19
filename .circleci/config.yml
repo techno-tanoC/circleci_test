@@ -8,7 +8,7 @@ jobs:
       - run:
           name: test
           command: |
-            echo '1'
+            echo '1-1'
             echo 'echo ${CIRCLE_PULL_REQUEST}'
             echo ${CIRCLE_PULL_REQUEST}
             echo 'echo ${CIRCLE_PULL_REQUESTS}'
